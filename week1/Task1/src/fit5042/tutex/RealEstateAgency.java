@@ -13,12 +13,8 @@ import java.util.logging.Logger;
 
 /**
  *
- * TODO Exercise 1.3 Step 3 Complete this class. Please refer to tutorial instructions.
- * This is the main driver class. This class contains the main method for Exercise 1A
  * 
- * This program can run without the completion of Exercise 1B.
- * 
- * @author Junyang
+ * @author Sampreeth Amith Kumar
  */
 public class RealEstateAgency 
 {
@@ -29,9 +25,7 @@ public class RealEstateAgency
         this.name = name;
         this.propertyRepository = PropertyRepositoryFactory.getInstance();
     }
-    
-    // this method is for initializing the property objects
-    // complete this method
+
     public void createProperty() {
         try 
         {
@@ -48,8 +42,6 @@ public class RealEstateAgency
 		}
     }
     
-    // this method is for displaying all the properties
-    // complete this method
     public void displayProperties() 
     {
     	try 

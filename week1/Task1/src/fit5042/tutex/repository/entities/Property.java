@@ -9,7 +9,7 @@ import java.text.NumberFormat;
  * @author Sampreeth Amith Kumar
  * 
  */
-//TODO Exercise 1.3 Step 1 Please refer tutorial exercise. 
+
 public class Property 
 {
 	private int propertyId;
