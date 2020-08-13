@@ -5,16 +5,18 @@ import java.util.ArrayList;
 import fit5042.tutex.constants.CommonInstance;
 import fit5042.tutex.entities.Property;
 
-public class PropertyRepository {
+public class PropertyRepository 
+{
 	private ArrayList<Property> propertyList;
 	
-	
-	public PropertyRepository() {
+	public PropertyRepository() 
+	{
     	propertyList = new ArrayList<Property>();
     	this.initialisePropertyList();
     }
 	
-	public void initialisePropertyList() {
+	public void initialisePropertyList() 
+	{
     	propertyList.clear();
     	
     	propertyList.add(CommonInstance.PROPERTY_FIRST);
@@ -23,15 +25,18 @@ public class PropertyRepository {
     	propertyList.add(CommonInstance.PROPERTY_FOURTH);
     }
 
-	public ArrayList<Property> getPropertyList() {
+	public ArrayList<Property> getPropertyList() 
+	{
 		return propertyList;
 	}
 
-	public void setPropertyList(ArrayList<Property> propertyList) {
+	public void setPropertyList(ArrayList<Property> propertyList) 
+	{
 		this.propertyList = propertyList;
 	}
 	
-	public void removeProperty(int propertyId) {
+	public void removeProperty(int propertyId) 
+	{
     	for (Property p : propertyList) {
     		if (p.getPropertyId() == propertyId) {
     			propertyList.remove(p);
@@ -46,9 +51,11 @@ public class PropertyRepository {
     }
     
     public void editProperty(Property property) {
-    	for (Property p : propertyList) {
+    	for (Property p : propertyList) 
+    	{
     		int id = property.getPropertyId();
-    		if (p.getPropertyId() == id) {
+    		if (p.getPropertyId() == id) 
+    		{
     			propertyList.set(id, property);
     			break;
     		}

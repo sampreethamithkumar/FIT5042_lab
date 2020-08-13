@@ -11,9 +11,7 @@ import fit5042.tutex.constants.CommonInstance;
 import fit5042.tutex.entities.Property;
 import fit5042.tutex.mbeans.PropertyManagedBean;
 
-
 /*
- * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -61,7 +59,7 @@ public class AddProperty {
                 .getELResolver().getValue(elContext, null, "propertyManagedBean");
     }
 
-    public void addProperty(Property localProperty) {
+    public String addProperty(Property localProperty) {
         try {
         	localProperty.setPropertyId(CommonInstance.PROPERTY_REPOSITORY.getPropertyId() + 1);
             propertyManagedBean.addProperty(localProperty);
@@ -70,11 +68,15 @@ public class AddProperty {
             app.searchAll();
 
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Property has been added succesfully"));
+            return "index";
         } catch (Exception ex) {
 
         }
         showForm = true;
+        return "add";
     }
+    
+    
     
 
 }

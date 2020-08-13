@@ -10,7 +10,8 @@ import fit5042.tutex.entities.Property;
 import fit5042.tutex.mbeans.PropertyManagedBean;
 import fit5042.tutex.repository.PropertyRepository;
 
-public class CommonInstance {
+public class CommonInstance 
+{
 	private final static ContactPerson CONTACT_PERSON_FIRST = new ContactPerson(1, "Eddie Leung", "0411234567");
 	private final static ContactPerson CONTACT_PERSON_SECOND = new ContactPerson(2, "Sunil Panda", "0422334335");
 	private final static ContactPerson CONTACT_PERSON_THIRD = new ContactPerson(3, "Jian Liew", "0409233432");

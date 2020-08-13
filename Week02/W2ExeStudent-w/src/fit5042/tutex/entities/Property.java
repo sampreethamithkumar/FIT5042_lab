@@ -44,7 +44,8 @@ public class Property implements Serializable {
 
 	// non-defaut constructor
 	public Property(int propertyId, Address address, int numberOfBedrooms, double size, double price,
-			ContactPerson contactPerson, Set<String> tags) {
+			ContactPerson contactPerson, Set<String> tags) 
+	{
 		this.propertyId = propertyId;
 		this.address = address;
 		this.size = size;

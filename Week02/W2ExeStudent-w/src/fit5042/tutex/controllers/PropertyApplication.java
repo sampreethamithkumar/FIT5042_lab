@@ -59,18 +59,24 @@ public class PropertyApplication {
 	// when loading, and after adding or deleting, the property list needs to be
 	// refreshed
 	// this method is for that purpose
-	public void updatePropertyList() {
-		if (properties != null && properties.size() > 0) {
+	public void updatePropertyList() 
+	{
+		if (properties != null && properties.size() > 0) 
+		{
 
-		} else {
+		} 
+		else 
+		{
 			this.searchAll();
 		}
 	}
 
-	public void searchAll() {
+	public void searchAll() 
+	{
 		properties.clear();
 
-		for (Property property : propertyManagedBean.getAllProperties()) {
+		for (Property property : propertyManagedBean.getAllProperties()) 
+		{
 			properties.add(property);
 		}
 	}

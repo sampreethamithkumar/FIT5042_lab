@@ -26,17 +26,18 @@ import javax.faces.context.FacesContext;
 @ManagedBean(name = "propertyManagedBean")
 @SessionScoped
 
-public class PropertyManagedBean implements Serializable {
-
-    
-
+public class PropertyManagedBean implements Serializable 
+{
     /**
      * Creates a new instance of PropertyManagedBean
      */
-    public PropertyManagedBean() {
+    public PropertyManagedBean() 
+    {
+    	
     }
 
-    public List<Property> getAllProperties() {
+    public List<Property> getAllProperties() 
+    {
         try {
             List<Property> properties = CommonInstance.PROPERTY_REPOSITORY.getPropertyList();
             return properties;
@@ -46,7 +47,8 @@ public class PropertyManagedBean implements Serializable {
         return null;
     }
 
-    public void removeProperty(int propertyId) {
+    public void removeProperty(int propertyId) 
+    {
         try {
         	CommonInstance.PROPERTY_REPOSITORY.removeProperty(propertyId);
         } catch (Exception ex) {
