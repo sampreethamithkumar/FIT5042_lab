@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:form>
+		<div>
+                   <h:inputText value="#{searchProperty.searchByInt}" id="searchById" required="true" onchange ="if (document.getElementById('MyForm:searchById').value.trim() == '') {document.getElementById('MyForm:searchById').value = 0;} "  />
+                    <h:commandButton id="searchId" value="Search by Id" action="#{searchProperty.searchPropertyById(searchProperty.searchByInt)}" class="btn btn-primary" >
+                        <f:param name="propertyID" value="#{status.index + 1}"/>
+                    </h:commandButton>
+
+                    <h:inputText value="#{searchProperty.searchByDouble}" id="searchByBudget" required="true" onchange="if (document.getElementById('MyForm:searchByBudget').value.trim() == '') {document.getElementById('MyForm:searchByBudget').value = 0.0;} " />
+                    <h:commandButton id="searchBudget" value="Search by Budget" action="#{searchProperty.searchPropertyByBudget(searchProperty.searchByDouble)}" class="btn btn-primary" >
+                        <f:param name="propertyID" value="#{status.index + 1}"/>
+                    </h:commandButton>
+
+
+                    <h:selectOneMenu id="contact" value="#{searchProperty.contactPersonId}" >
+                        <f:selectItem itemValue="#{null}" itemLabel="--select--" />
+                        <f:selectItems value="#{propertyManagedBean.allContactPeople}" var="c"
+                                       itemLabel="#{c.name}" itemValue="#{c.conactPersonId}" />
+                    </h:selectOneMenu>
+                    <h:commandButton id="searchByContact" value="Search by Contact" action="#{searchProperty.searchPropertyByContactPersonId(searchProperty.contactPersonId)}" class="btn btn-primary" >
+                        <f:param name="propertyID" value="#{status.index + 1}"/>
+                    </h:commandButton>
+                </div>
+	
+	</h:form>
+</html>
