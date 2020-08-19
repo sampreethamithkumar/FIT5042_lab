@@ -52,7 +52,6 @@ public class ComparePropertySessionBean implements CompareProperty
 			return Integer.MIN_VALUE;
 		}
 		
-		
 		Iterator<Property> propIterate = list.iterator();
 		Property prop = propIterate.next();
 		double pricePerRoom = prop.getPrice()/prop.getNumberOfBedrooms();
@@ -61,13 +60,13 @@ public class ComparePropertySessionBean implements CompareProperty
 		{
 			double propertyPricePerRoom = property.getPrice()/property.getNumberOfBedrooms();
 			if (propertyPricePerRoom < pricePerRoom)
-				pricePerRoom = prop.getPrice();
+				pricePerRoom = propertyPricePerRoom;
 		}
 		
 		for (Property property : list)
 		{
 			if ((property.getPrice()/property.getNumberOfBedrooms()) == pricePerRoom)
-				return prop.getPropertyId();
+				return property.getPropertyId();
 		}
 		return -1;
 	}
