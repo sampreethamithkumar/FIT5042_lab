@@ -4,6 +4,7 @@
 package fit5042.tutex.mbeans;
 
 import fit5042.tutex.calculator.CompareProperty;
+import fit5042.tutex.calculator.ComparePropertySessionBean;
 import fit5042.tutex.repository.PropertyRepository;
 import fit5042.tutex.repository.entities.Address;
 import fit5042.tutex.repository.entities.ContactPerson;
@@ -12,6 +13,7 @@ import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
@@ -37,6 +39,8 @@ public class PropertyManagedBean implements Serializable {
 	
     private int bestPerRoom;
     private int selectedId;
+    
+    //private ComparePropertySessionBean sessionBean;
 
     public int getSelectedId() {
         return selectedId;
@@ -190,11 +194,10 @@ public class PropertyManagedBean implements Serializable {
     public String bestPerRoom()
     {
         bestPerRoom = compareProperty.bestPerRoom();
-        return "index";
+        return "compare";
     }
     
     public int getFinalPropertyId() {
     	return propertyRepository.getPropertyId();
     }
-    
 }

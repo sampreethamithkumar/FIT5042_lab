@@ -50,6 +50,6 @@ public class LoanManagedBean implements Serializable {
         
         monthlyPayment = calculator.calculate(loan.getPrinciple(),loan.getNumberOfYears(),loan.getInterestRate());
         loan.setMonthlyPayment(monthlyPayment);
-        return "index";
+        return "loan";
     }
 }

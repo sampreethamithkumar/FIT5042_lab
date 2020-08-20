@@ -16,8 +16,9 @@
 }
 
 .navbar ul {
-	padding:0;
+	padding:10px;
 	list-style: none;
+	margin : 10px;
 }
 
 .navbar h:commandButton {
@@ -28,9 +29,22 @@
 	padding-right: 15px;
 }
 
+.navbar h:commandButton h:hover{
+	background-color : #fff;
+}
+
 .navbar a {
 	color : #fff;
 	text-decoration : none;
 	font-size : 18px;
 	padding-right: 15px;
 }
+
+.searchContainer {
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+.error {
+	color: red;
+	}

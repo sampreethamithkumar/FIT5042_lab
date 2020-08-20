@@ -69,6 +69,5 @@ public class ComparePropertySessionBean implements CompareProperty
 				return property.getPropertyId();
 		}
 		return -1;
-	}
-	
+	}	
 }

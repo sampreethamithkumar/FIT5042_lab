@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+
+	<h:head>
+        <h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+        <h:outputStylesheet library="css" name = "style.css"></h:outputStylesheet>
+        <title>Loan Calculator</title>
+    </h:head>
+    <body>
+		<div class="container">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-brand">
+                    Loan Monthly Payment Calculator
+                </div>
+            </div>
+			<h:form>
+            <div class="navbar">
+            		<ul>
+            			<h:commandButton id="Home" value="Home" action="index.xhtml" class="btn btn-primary" /> 
+            			 &nbsp; &nbsp;
+            			<h:commandButton id="search" value="Search" action="search.xhtml" class="btn btn-primary" /> 
+            			&nbsp; &nbsp;
+            			<h:commandButton id="loanCalculator" value="loan Calculator" action="loan.xhtml" class ="btn btn-primary"/>
+            			&nbsp; &nbsp;
+            			<h:commandButton id="compareProp" value="Property Compare" action="compare.xhtml" class ="btn btn-primary"/>
+            		</ul>
+            </div>
+             </h:form>
+             
+             <h:form>
+             <table>
+             <tr> 
+				<td> Principle:</td>
+				<td></td>
+				 <td><h:inputText id="principle" value="#{loanManagedBean.loan.principle}" required="true" requiredMessage="Please enter the principle amount" 
+             validatorMessage="Principle should be greater than 1000" >
+             <f:validateLongRange minimum="1000"/>
+             </h:inputText></td> 
+             <td><h:message for="principle" styleClass="error"/></td>          
+             </tr>
+             <tr>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+             </tr>
+          	<tr>
+          		<td>Interest Rate:</td>
+          		<td></td>
+          		<td><h:selectOneMenu value="#{loanManagedBean.loan.interestRate}">
+             			<f:selectItem itemLabel="0.01" itemValue="0.01"/>
+             			<f:selectItem itemLabel="0.02" itemValue="0.02"/>
+             			<f:selectItem itemLabel="0.03" itemValue="0.03"/>
+             	</h:selectOneMenu></td>
+             	<td></td>
+          	</tr>
+          	<tr>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+             </tr>
+			<tr>
+				<td>Number of Years:</td>
+				<td></td>
+				<td><h:inputText value="#{loanManagedBean.loan.numberOfYears}" id="year" required="true" 
+             requiredMessage="Please enter the year" validatorMessage="Year should be atleast 1">
+             	<f:validateLongRange minimum="1"/>
+             </h:inputText></td>
+             <td><h:message for="year" styleClass="error"/></td>
+			</tr>
+			<tr>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+             </tr>
+             <tr>
+             	<td>Monthly Payment:</td>
+             	<td></td>
+             	<td><h:outputLabel id="monthlyPayment" value="#{loanManagedBean.loan.monthlyPayment}">
+                                <f:convertNumber currencyCode="AUD" type="currency" />
+                      </h:outputLabel></td>
+                 <td></td>           
+             </tr>
+			</table>
+			<br/>
+             <h:commandButton id="calculate" value="Calculate" action="#{loanManagedBean.calculate()}" class="btn btn-primary"/>
+           </h:form>
+           </div>
+      </body>
+</html>
