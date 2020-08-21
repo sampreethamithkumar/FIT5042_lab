@@ -12,7 +12,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/W3Enhancement-common"/>
 	<classpathentry kind="lib" path="F:/Monash/Semester 2/FIT5042 - EAD/lab/javaee-api-7.0.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/W3ExeStudent-common"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

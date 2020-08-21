@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>W3ExeStuden</name>
+	<name>W3ExeStudent-application</name>
 	<comment></comment>
 	<projects>
-		<project>W3ExeSolution-common</project>
-		<project>W3ExeSolution-ejb</project>
-		<project>W3ExeSolution-war</project>
+		<project>W3ExeStudent-war</project>
+		<project>W3ExeStudent-ejb</project>
+		<project>W3ExeStudent-common</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
