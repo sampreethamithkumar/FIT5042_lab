@@ -15,8 +15,7 @@ import fit5042.tutex.calculator.MonthlyPaymentCalculator;
 
 /**
  *
- * @author: originally created by Eddie. The following code has been changed in
- * order for students to practice.
+ * @author: Sampreeth Amith Kumar 
  */
 @ManagedBean(name = "loanManagedBean",eager = true)
 @SessionScoped
@@ -44,9 +43,6 @@ public class LoanManagedBean implements Serializable {
         double monthlyPayment;
         //You will need to modify the monthlyPayment value and set it as the monthly payment attribute value into the loan instance
         //Please complete this method starts from here
-//        int numberOfPayments = year * 12;
-//		 monthlyPayment = principle * (interestRate * (Math.pow((1 + interestRate), numberOfPayments))) / ((Math.pow((1 + interestRate),
-//		numberOfPayments)) - 1);
         
         monthlyPayment = calculator.calculate(loan.getPrinciple(),loan.getNumberOfYears(),loan.getInterestRate());
         loan.setMonthlyPayment(monthlyPayment);
