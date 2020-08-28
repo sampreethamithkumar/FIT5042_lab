@@ -10,6 +10,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -23,7 +24,7 @@ import javax.persistence.metamodel.*;
 public class JPAPropertyRepositoryImpl implements PropertyRepository {
 
     //insert code (annotation) here to use container managed entity manager to complete these methods  
-    @PersistenceContext
+    @PersistenceContext(unitName="W4ExeSolution-ejbPU")
 	private EntityManager entityManager;
 
     @Override
@@ -81,15 +82,12 @@ public class JPAPropertyRepositoryImpl implements PropertyRepository {
         //complete this method using Criteria API
     	CriteriaBuilder builder = entityManager.getCriteriaBuilder();
     	CriteriaQuery<Property> criteriaQuery = builder.createQuery(Property.class);
-    	Root<Property> prop = criteriaQuery.from(Property.class);
-    	criteriaQuery.select(prop).where(builder.equal((prop.get("price")), budget));
-    	Query query = entityManager.createQuery(criteriaQuery);
-    	List<Property> property = query.getResultList();
+    	Root<Property> c = criteriaQuery.from(Property.class);
+    	criteriaQuery.select(c).where(builder.lessThanOrEqualTo(c.get("price").as(Double.class), budget));
+    	List<Property> result = entityManager.createQuery(criteriaQuery).getResultList();
+        return result;
     	
-    	if (property != null)
-    		return property;
+    
     	
-   
-        return null;
     }
 }

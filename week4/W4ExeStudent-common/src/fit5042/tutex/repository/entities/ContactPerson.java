@@ -71,10 +71,8 @@ public class ContactPerson implements Serializable {
     }
 
     //enforce the relationship between a property and its contact person using annotation(s). Each property has one and only one contact person. Each contact person might be responsible for zero to many properties
-    @OneToMany
-    @JoinTable(name="ContactPerson_property",
-    	joinColumns= @JoinColumn(name="ContactPerson_FK"),
-    	inverseJoinColumns = @JoinColumn(name="Properties_FK")	)
+    @OneToMany(mappedBy = "contactPerson")
+    @JoinColumn
     public Set<Property> getProperties() {
         return properties;
     }

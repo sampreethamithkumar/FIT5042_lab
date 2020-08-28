@@ -5,6 +5,7 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 
 /**
  *
@@ -41,7 +42,7 @@ public class Address implements Serializable {
     }
 
     //complete by adding annotation here for column name = "street_address"
-    @Column(name="stree_address")
+    @Column(name="street_address")
     public String getStreetAddress() {
         return streetAddress;
     }

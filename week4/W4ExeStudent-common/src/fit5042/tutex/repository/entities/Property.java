@@ -101,8 +101,7 @@ public class Property implements Serializable {
     }
 
     //enforce the relationship between a property and its contact person using annotation(s). Each property has one and only one contact person. Each contact person might be responsible for zero to many properties
-    @OneToOne
-    @JoinColumn(name="contact_person")
+    @ManyToOne
     public ContactPerson getContactPerson() {
         return contactPerson;
     }
@@ -113,8 +112,8 @@ public class Property implements Serializable {
 
     //annotate the attribute tags in Property class so that the tags of a property will be stored in a table called TAG. The tags of a property should be eagerly fetched and the value of each tag must be stored in a column VALUE in the TAG table
     @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name="Tag")
-    @Column(name="Value")
+    @CollectionTable(name="TAG")
+    @Column(name="VALUE")
     public Set<String> getTags() {
         return tags;
     }
