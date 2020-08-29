@@ -11,6 +11,7 @@ import java.io.Serializable;
  *
  * @author Eddie
  */
+
 public class Loan implements Serializable {
 
     private double principle;
