@@ -60,6 +60,10 @@ public class JPAPropertyRepositoryImpl implements PropertyRepository {
         return entityManager.createNamedQuery(ContactPerson.GET_ALL_QUERY_NAME).getResultList();
     }
 
+    /**
+     * remove property by property Id
+     * Container managed used to find property and remove property from database.
+     */
     @Override
     public void removeProperty(int propertyId) throws Exception 
     {
@@ -77,17 +81,17 @@ public class JPAPropertyRepositoryImpl implements PropertyRepository {
         }
     }
 
+    /**
+     * Search property less than the budget in the list. 
+     * Criteria Builder used to get data from database.
+     */
     @Override
     public List<Property> searchPropertyByBudget(double budget) throws Exception {
-        //complete this method using Criteria API
     	CriteriaBuilder builder = entityManager.getCriteriaBuilder();
     	CriteriaQuery<Property> criteriaQuery = builder.createQuery(Property.class);
     	Root<Property> c = criteriaQuery.from(Property.class);
     	criteriaQuery.select(c).where(builder.lessThanOrEqualTo(c.get("price").as(Double.class), budget));
     	List<Property> result = entityManager.createQuery(criteriaQuery).getResultList();
         return result;
-    	
-    
-    	
     }
 }

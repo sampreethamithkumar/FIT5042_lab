@@ -1,0 +1,38 @@
+CREATE TABLE USERS
+(
+	id bigint NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+	username varchar(150) not null,
+	password varchar(150) not null,
+	primary key (id)
+);
+CREATE TABLE USERGROUPS
+(
+	id bigint NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+	username varchar(150) not null,
+	groupname varchar(150) not null,
+	primary key (id)
+);
+insert into USERS (username, password) values(
+	'teacher1',
+	'd6a78e7024124b13ef172b5853e9c63943a618655af216be3cfa02b519eb8455'
+);
+insert into USERS (username, password) values(
+	'student1',
+	'509e87a6c45ee0a3c657bf946dd6dc43d7e5502143be195280f279002e70f7d9'
+);
+insert into USERS (username, password) values(
+	'student2',
+	'eb4b3111401df980f14f28ad6804ae096df1e1c6963c51eab4140be226f8c94c'
+);
+insert into USERGROUPS (username, groupname) values(
+	'teacher1',
+	'teacher'
+);
+insert into USERGROUPS (username, groupname) values(
+	'student1',
+	'student'
+);
+insert into USERGROUPS (username, groupname) values(
+	'student2',
+	'student'
+);
