@@ -8,11 +8,15 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import {PokemonDataService} from "./data/PokemonDataService";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { PokemonListComponent } from './pokeapi/pokemon-list/pokemon-list.component';
+import { PokemonDetailComponent } from './pokeapi/pokemon-detail/pokemon-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PokemonCrudComponent
+    PokemonCrudComponent,
+    PokemonListComponent,
+    PokemonDetailComponent
   ],
   imports: [
     BrowserModule,

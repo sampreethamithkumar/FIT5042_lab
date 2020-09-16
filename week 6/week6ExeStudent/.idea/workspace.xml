@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d1cedd3-e3bb-460c-a30e-6ab92ba2dab0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pokemon/src/app/app.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokemon/src/app/data/PokemonDataService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokemon/src/app/model/pokemon.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokemon/src/app/service/dataService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../week4/W4ExeStudent-war/WebContent/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../../week4/W4ExeStudent-war/WebContent/edit.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +14,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pokemon/src/app/pokemon-crud/pokemon-crud.component.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1hGeAMEkTvMvvdQ4oAO3xg5FQYB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -44,6 +46,8 @@
       <option name="presentableId" value="Default" />
       <updated>1599641716060</updated>
       <workItem from="1599641717502" duration="6806000" />
+      <workItem from="1599698214847" duration="1755000" />
+      <workItem from="1599799126179" duration="3999000" />
     </task>
     <servers />
   </component>
@@ -71,5 +75,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1599641879217" />
+    <state x="214" y="165" width="540" height="524" key="StructurePopup" timestamp="1599800114790">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="214" y="165" width="540" height="524" key="StructurePopup/0.0.1536.834@0.0.1536.834" timestamp="1599800114790" />
   </component>
 </project>
